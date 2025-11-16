@@ -1,12 +1,31 @@
 # Coherence Entropy: A Practical Framework for Hallucination and Misalignment
 
-Status: Concept approved. Drafting outline. Target venues: Q1 variants (to be confirmed via RMIT agreements); arXiv preprint.
+## Overview
+
+- Code-only public repository for rendering and validating figures for the Coherence Entropy framework.
+- Bring Your Own Data (BYOD): scripts expect lightweight JSON inputs; no datasets or manuscript are included.
+- Outputs are JSON (figure data) and PNGs (renders) produced locally.
+
+## At a Glance
+
+- What: Figure generation and schema checks for F3 (detection compare/param) and F4 (timelines).
+- Includes: `scripts/`, `Makefile` (F3/F4 targets), `tests/` (schema checks), CI workflow.
+- Excludes: datasets, manuscript source/PDF, prebuilt artifacts.
+- Requires: Python 3.10+, `matplotlib`, `numpy`. Install: `pip install -r requirements.txt`.
+- Quickstart: `make test` → add JSON to `aiw/data/` → `make f3_compare` / `make f3_param` / `make f4`.
+
+## Directory layout
+
+- `scripts/` — figure generators and renderers
+- `tests/` — JSON schema checks for figure artifacts
+- `aiw/data/` — your BYOD inputs (series and detect_*.json)
+- `figures/` — outputs written locally by scripts
 
 ## TL;DR
 
 - Hc_post decreases with basin-preserving regularization λ; privacy noise preserves the trend.
 - Simple detectors (z-threshold, two-sided CUSUM) identify spikes/dips on AIW timelines; parameter sweeps show robustness.
-- Reproducible builds via Makefile (figs, arxiv, bundle) and JSON schema tests; arXiv tarball provided.
+- Reproducible builds via Makefile (F3/F4) and JSON schema tests; code-only release (no data/manuscript).
 
 ## Scope (public code-only)
 
