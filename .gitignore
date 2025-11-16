@@ -1,0 +1,11 @@
+# build and generated artifacts
+dist/
+figures/
+examples/
+manuscript/
+__pycache__/
+*.log
+*.aux
+*.out
+*.fdb_latexmk
+*.fls
